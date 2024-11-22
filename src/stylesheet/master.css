@@ -1,0 +1,396 @@
+@font-face {
+    font-family: main;
+    src: url(../font/Quantico-Regular.ttf);
+}
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+main{
+    /* background-image: url(../img/background.jpeg); */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        position: relative;
+        transform-origin: center;
+        transition: .5s;
+        >.box1{
+            left: 10%;
+            top: 0;
+            width: 350px;
+            height: 650px;
+            position: absolute;
+            background-color: green;
+            transform: translateZ(1px);
+        }
+        >.box2{
+            width: 350px;
+            height: 700px;
+            background-image: linear-gradient(to top,#F9B44A,#F9CF58);
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            >*{
+                width: 100%;
+            }
+            >.topside{
+                height: 300px;
+                position: relative;
+                z-index: 100000000;
+                >.leftear{
+                    width: 200px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background-color: #223542;
+                    position: absolute;
+                    transform: translateX(-55%) translateY(-55%);
+                }
+                >.rightear{
+                    width: 200px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background-color: #223542;
+                    position: absolute;
+                    right: 0;
+                    transform: translateX(55%) translateY(-55%);
+                }
+                >.dogface{
+                    width: 200px;
+                    height: 200px;
+                    /* border: 1px solid red; */
+                    position: absolute;
+                    top: 35%;
+                    left: 50%;
+                    transform: translateX(-50%);    
+                    transform-origin: center;
+                    transition: .3s;
+                    >.eyes{
+                        width: 40px;
+                        aspect-ratio: 1 / 1;
+                        border-radius: 50%;
+                        background-color: #243946;
+                        position: absolute;
+                        >.glow{
+                            position: absolute;
+                            top: 11%;
+                            right: 6%;
+                            transform: rotate(40deg);
+                            width: 18px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: white;
+                        }
+                    }
+                    >.lefteye{
+                        left: 5%;
+                    }
+                    >.righteye{
+                        right: 5%;
+                    }
+                    >.nose{
+                        position: absolute;
+                        width: 60px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 40%;
+                        >div{
+                            position: absolute;
+                            width: 25px;
+                            height: 13px;
+                            background-color: #476375;
+                            border-radius: 50%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: 10%;
+                        }
+                    }
+                    >.mouth{
+                        position: absolute;
+                        width: 120px;
+                        height: 50px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 60%;
+                        >img{
+                            width: 100%;
+                            position: absolute;
+                            left: 0;
+                        }
+                        >.mouthhole{
+                            width: 55%;
+                            position: absolute;
+                            height: 12px;
+                            left: 50%;
+                            top: 60%;
+                            transform: translateX(-50%);
+                            background-color: #243946;
+                            border-radius: 0px 0px 200px 200px;
+                            >.tongue{
+                                position: absolute;
+                                width: 30px;
+                                height: auto;
+                                left: 50%;
+                                top: 30%;
+                                transform: translateX(-50%);
+                                >.top{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 5px;
+                                    background-color: #FCB7BF;
+                                }
+                                >.tongue{
+                                    position: absolute;
+                                    top: 5px;
+                                    width: 100%;
+                                    height: 30px;
+                                    background-color: #FFD7DD;
+                                    border-radius: 0px 0px 200px 200px;
+                                    display: flex;
+                                    justify-content: center;
+                                    transform-origin: top;
+                                    >.line{
+                                        width: 20%;
+                                        height: 20px;
+                                        background-color: #FCB7BF;
+                                        border-radius: 0px 0px 200px 200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                >.hands{
+                    position: absolute;
+                    display: flex;
+                    align-items: end;
+                    transform: rotate(180deg)scale(1.1);
+                    bottom:-12%;
+                    z-index: 10000;
+                    left: 22%;
+                    transition: .6s ease-in-out;
+                    >.finger{
+                        width: 20px;
+                        height: 28px;
+                        background-color: #FAC555;
+                        border: 2px solid #243946;
+                        border-bottom: none;
+                        border-radius: 150px 150px 0px 0px;
+                        &:nth-of-type(1){
+                            transform: translateX(5px);
+                        }
+                        &:nth-of-type(2){
+                            height: 38px;
+                            z-index: 1000;
+                        }
+                        &:nth-of-type(3){
+                            transform: translateX(-5px);
+                        }
+                    }
+                }
+                >.righthand{
+                    left: 62%;
+                    width: fit-content;
+                }
+            }
+            >.bottomside{
+                height: 400px;
+                padding-left: 10%;
+                padding-right: 10%;
+                >.inputs{
+                    width: 100%;
+                    padding-top: 20px;
+                    >*{
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        >input{
+                            position: relative;
+                            width: 100%;
+                            height: 40px;
+                            border-radius: 50px;
+                            background-color: white;
+                            margin-bottom: 25px;
+                            outline: none;
+                            background-color: white;
+                            border: none;
+                            padding-left: 50px;
+                            font-family: main;
+                            padding-right: 25px;
+                            &::placeholder{
+                                font-family: main;
+                                text-transform: capitalize;
+                            }
+                        }
+                        >i{
+                            position: absolute;
+                            left: 7.5%;
+                            top: 19%;
+                            color: #BBBBBB;
+                        }
+                        >.error{
+                            width: 100%;
+                            font-family: main;
+                            font-size: 10px;
+                            color: #E83F36;
+                            position: absolute;
+                            left: 15px;
+                            top: 44px;
+                        }
+                        >.passShow{
+                            height: 30px;
+                            position: absolute;
+                            right: 3%;
+                            top: 5px;
+                            cursor: pointer;
+                            padding: 15px;
+                            background-color: #243946;
+                            border-radius: 15px;
+                            font-family: main;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 15px;
+                            color: white;
+                            outline: none;
+                            border: none;
+
+                        }
+                    }
+                    >.password{
+                        >input{
+                            padding-right: 80px;
+                            margin-bottom: 10px;
+                        }
+                        >.passwordstatue{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            >.passwordstrength{
+                                width: 70%;
+                                height: 5px;
+                                border-radius: 10px;
+                                background-color: white;
+                                margin-left: 10px;
+                                position: relative;
+                                overflow: hidden;
+                                >span{
+                                    left: -100%;
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    background-color: #EC1C22;
+                                    border-radius: 10px;
+                                    transition: .5s;
+                                }
+                            }
+                            >.passstrengthalert{
+                                transition: .5s;
+                                width: calc(30% - 10px);
+                                font-family: main;
+                                font-size: 13px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transform: translateY(-2px);
+                                color: black;
+                            }
+                        }
+                        >.error{
+                            position: unset;
+                            transform: translateX(15px);
+                        }
+                    }
+                }
+                >button{
+                    width: 80%;
+                    margin-top: 10px;
+                    margin-left: 10%;
+                    height: 40px;
+                    border: none;
+                    background-color: #243946;
+                    outline: none;
+                    font-family: main;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    color: white;
+                    font-size: 17px;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover{
+                        background-color: #394f5c;  
+                    }
+                }
+                >.credit{
+                    width: 100%;
+                    margin-top: 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    >*{
+                        width: 100%;
+                    }
+                    >.coded{
+                        display: flex;
+                        justify-content: center;
+                        font-family: main;
+                        font-size: 15px;
+                        color: #243946;
+                    }
+                    >.socials{
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 5px;
+                        >a{
+                            margin-left: 7px;
+                            >i{
+                                font-size: 18px;
+                                color: #243946;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+            >.successfullSignUp{
+                height: 400px;
+                padding-top: 20%;
+                padding-left: 10%;
+                padding-right: 10%;
+                display: none;
+                >h3{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: main;
+                    font-size: 25px;
+                    color: #223542;
+                    text-decoration: none;
+                    font-weight: normal;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.tonguemove{
+    animation: tonguemove .2s linear infinite alternate;
+}
+
+
+@keyframes tonguemove {
+    from{
+        transform: scaleY(100%);
+    }
+    to{
+        transform: scaleY(50%);
+    }
+}
