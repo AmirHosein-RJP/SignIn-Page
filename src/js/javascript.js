@@ -32,6 +32,12 @@ username.addEventListener('focus', ()=>{
 username.addEventListener('blur', ()=>{
     dogface.style.transform = 'translateX(-50%)rotate(0deg)'
 })
+username.addEventListener('input', (e)=>{
+    let uservalue = e.target.value
+    if(uservalue.search(/[^a-z | ^0-9 | ^. | ]/i) >= 0 || uservalue.includes(" ")){
+        e.target.value= e.target.value.slice(0, e.target.value.length -1)
+    }
+})
 
 //////////Email Input//////////
 
@@ -50,6 +56,12 @@ email.addEventListener('focus', ()=>{
 })
 email.addEventListener('blur', ()=>{
     dogface.style.transform = 'translateX(-50%)rotate(0deg)'
+})
+email.addEventListener('input', (e)=>{
+    let emailvalue = e.target.value
+    if(emailvalue.search(/[^a-z | ^0-9 | ^. | ]/i) >= 0 || emailvalue.includes(" ")){
+        e.target.value= e.target.value.slice(0, e.target.value.length -1)
+    }
 })
 
 //////////Password Input//////////
